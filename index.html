@@ -7,109 +7,130 @@
     <title>Gear TechTrendz</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <header>
-        <div class="logo">Gear TechTrendz</div>
-        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#deals">Deals</a></li>
-            </ul>
-        </nav>
-        <form role="search" aria-label="Search for products">
-            <input type="text" placeholder="Search for products..." aria-label="Search input">
-            <button class="search-btn" type="submit" aria-label="Submit search">🔍</button>
-        </form>
-        <div class="icons">
-            <button aria-label="Shopping Cart">🛒</button>
-            <button aria-label="User Account">👤</button>
-            <button class="mode" aria-label="Toggle dark mode">🌓</button>
+<header>
+    <div class="logo">Gear TechTrendz</div>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#deals">Deals</a></li>
+        </ul>
+    </nav>
+    <form role="search" aria-label="Search for products">
+        <input type="text" placeholder="Search for products..." aria-label="Search input">
+        <button class="search-btn" type="submit" aria-label="Submit search">🔍</button>
+    </form>
+    <div class="icons">
+        <button aria-label="Shopping Cart">
+            🛒
+        </button>
+        <button aria-label="User Account">
+            👤
+        </button>
+        <button class="mode" aria-label="Toggle dark mode">
+            🌤
+        </button>
+    </div>
+</header>
+
+<main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+        <h1 id="hero-heading" class="sr-only">Featured Promotions</h1>
+        <div class="carousel" id="carousel" role="region" aria-live="polite" aria-label="Image carousel">
+            <div class="slide fade-in"><img
+                    src="https://via.placeholder.com/1400x350/393E46/00ADB5?text=Big+Sale+Up+to+50%25+Off"
+                    alt="Big Sale Banner"></div>
+            <div class="slide fade-in"><img
+                    src="https://via.placeholder.com/1400x350/00ADB5/393E46?text=Free+Shipping+on+Orders+Over+$50"
+                    alt="Free Shipping Banner"></div>
+            <div class="slide fade-in"><img
+                    src="https://via.placeholder.com/1400x350/393E46/00ADB5?text=New+Arrivals+Every+Week"
+                    alt="New Arrivals Banner"></div>
         </div>
-    </header>
+        <button class="carousel-btn" id="prev" aria-label="Previous slide">❮</button>
+        <button class="carousel-btn" id="next" aria-label="Next slide">❯</button>
+    </section>
 
-    <main id="main">
-        <section class="hero" aria-labelledby="hero-heading">
-            <h1 id="hero-heading" class="sr-only">Featured Promotions</h1>
-            <div class="carousel" id="carousel" role="region" aria-live="polite" aria-label="Image carousel">
-                <div class="slide fade-in"><img src="https://via.placeholder.com/1200x300?text=Big+Sale"
-                        alt="Big Sale Banner"></div>
-                <div class="slide fade-in"><img src="https://via.placeholder.com/1200x300?text=Free+Shipping"
-                        alt="Free Shipping Banner"></div>
-                <div class="slide fade-in"><img src="https://via.placeholder.com/1200x300?text=New+Arrivals"
-                        alt="New Arrivals Banner"></div>
+    <section class="categories fade-in" id="categories" aria-labelledby="categories-heading">
+        <h2 id="categories-heading">Shop by Category</h2>
+        <div class="cat-grid">
+            <div class="cat-item" tabindex="0" role="button" aria-label="Electronics category">
+                <img src="https://via.placeholder.com/200x130/EEEEEE/393E46?text=Electronics" alt="Electronics">
+                <p>Electronics</p>
             </div>
-            <button class="carousel-btn" id="prev" aria-label="Previous slide">❮</button>
-            <button class="carousel-btn" id="next" aria-label="Next slide">❯</button>
-        </section>
-
-        <section class="categories fade-in" id="categories" aria-labelledby="categories-heading">
-            <h2 id="categories-heading">Shop by Category</h2>
-            <div class="cat-grid">
-                <div class="cat-item card" tabindex="0" role="button" aria-label="Electronics category">
-                    <img src="https://via.placeholder.com/150x100?text=Electronics" alt="Electronics">
-                    <p>Electronics</p>
-                </div>
-                <div class="cat-item card" tabindex="0" role="button" aria-label="Fashion category">
-                    <img src="https://via.placeholder.com/150x100?text=Fashion" alt="Fashion">
-                    <p>Fashion</p>
-                </div>
-                <div class="cat-item card" tabindex="0" role="button" aria-label="Home and Living category">
-                    <img src="https://via.placeholder.com/150x100?text=Home+and+Living" alt="Home and Living">
-                    <p>Home & Living</p>
-                </div>
-                <div class="cat-item card" tabindex="0" role="button" aria-label="Beauty category">
-                    <img src="https://via.placeholder.com/150x100?text=Beauty" alt="Beauty">
-                    <p>Beauty</p>
-                </div>
+            <div class="cat-item" tabindex="0" role="button" aria-label="Fashion category">
+                <img src="https://via.placeholder.com/200x130/EEEEEE/393E46?text=Fashion" alt="Fashion">
+                <p>Fashion</p>
             </div>
-        </section>
-
-        <section class="flash-sale fade-in" aria-labelledby="flash-sale-heading">
-            <h2 id="flash-sale-heading">Flash Sale <span class="timer" id="timer" aria-live="polite"></span></h2>
-            <div class="sale-grid">
-                <div class="product card" tabindex="0" role="button" aria-label="Wireless Charger product">
-                    <img src="https://via.placeholder.com/200x150?text=Wireless+Charger" alt="Wireless Charger">
-                    <p>Wireless Charger</p>
-                    <p class="price">$19.99</p>
-                    <p class="old-price">$29.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product card" tabindex="0" role="button" aria-label="USB Cable product">
-                    <img src="https://via.placeholder.com/200x150?text=USB+Cable" alt="USB Cable">
-                    <p>USB Cable</p>
-                    <p class="price">$7.99</p>
-                    <p class="old-price">$12.99</p>
-                    <button>Add to Cart</button>
-                </div>
+            <div class="cat-item" tabindex="0" role="button" aria-label="Home and Living category">
+                <img src="https://via.placeholder.com/200x130/EEEEEE/393E46?text=Home+%26+Living"
+                    alt="Home and Living">
+                <p>Home & Living</p>
             </div>
-        </section>
-
-        <section class="recommended fade-in" aria-labelledby="recommended-heading">
-            <h2 id="recommended-heading">Recommended</h2>
-            <div class="rec-grid">
-                <div class="product card" tabindex="0" role="button" aria-label="Bluetooth Speaker product">
-                    <img src="https://via.placeholder.com/200x150?text=Bluetooth+Speaker" alt="Bluetooth Speaker">
-                    <p>Bluetooth Speaker</p>
-                    <p class="price">$39.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product card" tabindex="0" role="button" aria-label="Smart Watch product">
-                    <img src="https://via.placeholder.com/200x150?text=Smart+Watch" alt="Smart Watch">
-                    <p>Smart Watch</p>
-                    <p class="price">$99.99</p>
-                    <button>Add to Cart</button>
-                </div>
+            <div class="cat-item" tabindex="0" role="button" aria-label="Beauty category">
+                <img src="https://via.placeholder.com/200x130/EEEEEE/393E46?text=Beauty" alt="Beauty">
+                <p>Beauty</p>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2023 Gear TechTrendz</p>
-    </footer>
+    <section class="flash-sale fade-in" aria-labelledby="flash-sale-heading">
+        <h2 id="flash-sale-heading">⚡ Flash Sale <span class="timer" id="timer" aria-live="polite"></span></h2>
+        <div class="sale-grid">
+            <div class="product" tabindex="0" aria-label="Wireless Charger product">
+                <img src="https://via.placeholder.com/240x180/EEEEEE/393E46?text=Wireless+Charger"
+                    alt="Wireless Charger">
+                <p>Wireless Charger</p>
+                <p class="price">$19.99</p>
+                <p class="old-price">$29.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product" tabindex="0" aria-label="USB Cable product">
+                <img src="https://via.placeholder.com/240x180/EEEEEE/393E46?text=USB+Cable" alt="USB Cable">
+                <p>USB Cable</p>
+                <p class="price">$7.99</p>
+                <p class="old-price">$12.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="recommended fade-in" aria-labelledby="recommended-heading">
+        <h2 id="recommended-heading">Recommended for You</h2>
+        <div class="rec-grid">
+            <div class="product" tabindex="0" aria-label="Bluetooth Speaker product">
+                <img src="https://via.placeholder.com/240x180/EEEEEE/393E46?text=Bluetooth+Speaker"
+                    alt="Bluetooth Speaker">
+                <p>Bluetooth Speaker</p>
+                <p class="price">$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product" tabindex="0" aria-label="Smart Watch product">
+                <img src="https://via.placeholder.com/240x180/EEEEEE/393E46?text=Smart+Watch" alt="Smart Watch">
+                <p>Smart Watch</p>
+                <p class="price">$99.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; Gear TechTrendz - All Rights Reserved</p>
+    <br>
+    <a href="#">Conditions of Terms</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact Us</a>
+    <br><br>
+    <a href="#">About Us</a>
+    <a href="#">Help</a>
+    <a href="#">FAQ</a>
+</footer>
 
     <script src="script.js"></script>
 </body>
